@@ -1,0 +1,25 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: url("lojain.jpg");
+	background-size:cover;
+	font-family: sans-serif;
+}
+head{margin: 0;
+padding:0;
+font-family : sans-serif;
+}
+.login 
+{
+	width:  320px;
+	height:  420px;
+	margin: 20px auto;
+	background:rgba(0,0,0,0.5);
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 70px 30px;
+}

@@ -1,0 +1,33 @@
+ {% extends 'launch/home.html'%}
+ {% load static %}
+ {% block content %}
+ <div class="container" style="background-color:rgb(0,0,0,0.2)">
+
+ <form action="" method="POST">
+<article class="container" style="background-color:rgb(0,0,0,0.2)">
+  {% csrf_token %}
+
+
+     {{formset}}
+
+
+<button class="btn btn-primary" type="submit">Submit</button>
+     </article>
+ </form>
+  </div></div>
+</article>
+
+{%endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+

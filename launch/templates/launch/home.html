@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang = "ar" lang = "en">
+<link>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+	<title>MySite</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href= "{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href= "{% static 'css/s.css' %}">
+    <link rel="stylesheet" href= "{% static 'css/st.css' %}">
+    <link rel="stylesheet" href= "{% static 'css/r.css' %}">
+    <link rel="stylesheet" href= "{% static 'css/ff.css' %}">
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body class="container">
+ 
+
+	<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="{%url 'announcement'%}"><img src="{%static 'img/market.jpg'%}" style="width:40%">Check!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-90deg-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M4.854 14.854a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V3.5A2.5 2.5 0 0 1 6.5 1h8a.5.5 0 0 1 0 1h-8A1.5 1.5 0 0 0 5 3.5v9.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4z"></path>
+</svg></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+
+<li class="nav-item">
+           </li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'orders'  %}">Customer</a></li>
+            <li><a class="dropdown-item" href="{% url 'announcement'  %}"> Announcements</a></li>
+            <li><a class="dropdown-item" href="{% url 'dashboard' %}">Dashboard</a></li>
+         
+            <li><a class="dropdown-item" href="#">{{request.user}}</a><li>
+      </ul>
+
+      </ul>
+
+      <div class="d-flex">
+      <li class="nav-item">
+        <a class="btn btn-outline-primary" href="{%url 'register' %}">Sign Up</a>
+        </li>  
+<li class="nav-item">
+        <a class="btn btn-primary" href="{%url 'Login' %}">Login </a>
+        </li> 
+<li class="nav-item">
+        <a class="btn btn-outline-primary" href="{%url 'user_logout' %}">Logout </a>
+        </li> 
+       
+ 
+      </div> <br><br>
+      
+
+
+    </div>
+  </div>
+</nav>
+{% block content %}
+
+
+<!----------------------------------------------------------------------------------------------------------->
+<header id="home" class="home"></header>
+
+    <div class =  "jumbotron"  >
+
+
+    <div class="container-intro ">
+    <div class="dtable hw100">
+      <div class="dtable-cell hw100">
+        <div class="container text-center">
+
+
+     <div class="search-row animated fadeInUp rounded">
+      <form id="search" name="search" action="https://uae.souqopera.com/search" method="GET">
+                <div class="row m-0">
+                  <div class="col-md-5 col-sm-12 mb-1 mb-xl-0 mb-lg-0 mb-md-0 search-col relative">
+
+                    <input type="text" name="q" class="form-control keyword has-icon" placeholder="what?">
+
+
+                  </div>
+
+ <div class="col-md-5 col-sm-12 search-col relative locationicon">
+ <input type="hidden" id="lSearch" name="" value="">
+<input type="text" id="locSearch" name="location" class="form-control locinput input-rel searchtag-input has-icon tooltipHere" placeholder="where" title="" data-placement="bottom" data-toggle="tooltip" data-original-title=" Town &quot; area &quot; what?">
+
+       </div>
+   <div class="col-md-2 col-sm-20% search-col">
+      <button class="btn btn-primary btn-search btn-block">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg>  Search
+                    </button>
+                  </div>
+                  <input type="hidden" name="_token" value="REt5gpxXdPVzmETZath8a6bobxgnijzV95Q8NeER">
+                </div>
+              </form>
+            </div>
+
+        </div>
+      </div>
+    </div>
+  </div><br><br><br>
+           <h1 class="display-3" font="bold">Elkhalieg Sooq</h1><br>
+           <p class="lead" font="bold"> Simple market and professional </p>
+           <br><br>
+
+            <h3 class=" id" style=" float:left">Browse By :</p>
+                <h3 class=" id" style=" float :right">:   تصفح عن طريق   </h3><br><br><br><br>
+
+<!--------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+   <article class = "container">
+
+
+
+<div class="container">
+  <div class="row row-cols-auto">
+    <div class="col"> <a    href="{% url 'announcement' %}"><img src="{%static 'img/job.jpg' %}" style="width:40%" alt=" "><br>Find Job</a></div>
+    <div class="col">  <a   href="#"><img src="{%static 'img/wedd.png' %}" style="width:50%" alt=" "> <br>Parties</a></div>
+    <div class="col"><a   href="#"><img src="{%static 'img/computer.jpg' %}" style="width:40%" alt=" "><br>Computer</a> </div>
+    <div class="col"><a   href="#"><img src="{%static 'img/comm.png' %}" style="width:40%" alt=" "> <br>Community</a></div><br>
+  </div><br><br>
+    <div class="container">
+  <div class="row row-cols-auto">
+    <div class="col"> <a class="id" href="#"><img src="{%static 'img/animals.jpg' %}" style="width:40%" alt=" "><br>Birds and Animals</a></div>
+    <div class="col">  <a class=id" href="#"><img src="{%static 'img/cars.jpg' %}" style="width:50%" alt=" "><br>Cars</a></div>
+    <div class="col"><a class="id" href="#"><img src="{%static 'img/service.jpg' %}" style="width:40%" alt=" "><br>Services </a></div>
+    <div class="col"><a class="id" href="#"><img src="{%static 'img/meetings.jpg' %}" style="width:40%" alt=" "><br>Meetings and Show</a></div><br>
+  </div>
+</div><br><br>
+    <div class="container">
+  <div class="row row-cols-auto">
+    <div class="col"> <a class="id" href="#"><img src="{%static 'img/clothes.png' %}" style="width:40%" alt=" "><br>Clothes&Uniforms</a></div><br>
+    <div class="col">  <a class=id" href="#"><img src="{%static 'img/vacancy.jpg' %}" style="width:40%" alt=" "><br>Education</a></div>
+    <div class="col"><a class="id" href="#"><img src="{%static 'img/company.jpg' %}" style="width:40%" alt=" "><br>Companies Guide</a></div><br>
+
+  </div>
+</div>
+</div>
+
+
+
+   <div class="row align-items-start">
+    <div class="col1" style = "disply : flex">
+      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-tv" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      </svg><img src="sw_files/thumb-70x70-01bd412875e11f7139efa41e00a85d6e.png" class="lazyload img-fluid" alt="">
+
+
+
+                                <div class="h-spacer"></div>
+  <div class="container">
+  <div class="col-xl-12 page-content p-0">
+    <div class="inner-box">
+
+      <div class="row">
+                                <div class="col-lg-8 col-md-12 page-content m-0 p-0">
+                      <div class="relative location-content">
+
+                              <h2 class="title-3 pt-1 pr-3 pb-3 pl-3" style="white-space: nowrap;">
+                  <i class="icon-location-2"></i>&nbsp;اختر مدينة أو منطقة
+                </h2>
+                            <div class="col10-xl-12 tab-inner">
+                <div class="row">
+                                      <ul class="cat-list col-md-4 col-sm-6 col-xs-12 mb-0 mb-xl-2 mb-lg-2 mb-md-2 ">
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D8%AF%D8%A8%D9%8A/2550392">
+                              دبي
+                            </a>
+                                                                              </li>
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D8%A7%D9%84%D8%B4%D8%A7%D8%B1%D9%82%D8%A9/2550395">
+                              الشارقة
+                            </a>
+                                                                              </li>
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D8%A7%D8%A8%D9%88%D8%B8%D8%A8%D9%8A/2550401">
+                              ابوظبي
+                            </a>
+                                                                              </li>
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D8%B9%D8%AC%D9%85%D8%A7%D9%86/2550399">
+                              عجمان
+                            </a>
+                                                                              </li>
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D8%B1%D8%A7%D8%B3-%D8%A7%D9%84%D8%AE%D9%8A%D9%85%D8%A9/2550388">
+                              راس الخيمة
+                            </a>
+                                                                              </li>
+                                          </ul>
+                                      <ul class="cat-list col-md-4 col-sm-6 col-xs-12 mb-0 mb-xl-2 mb-lg-2 mb-md-2 ">
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D9%85%D8%B5%D8%A7%D9%81%D9%89/2550404">
+                              مصافى
+                            </a>
+                                                                              </li>
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%A7%D9%84%D9%81%D8%AC%D9%8A%D8%B1%D8%A9/2550397">
+                              مدينة الفجيرة
+                            </a>
+                                                                              </li>
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D8%AE%D9%84%D9%8A%D9%81%D8%A9/2550402">
+                              خليفة
+                            </a>
+                                                                              </li>
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D8%B1%D9%8A%D9%81-%D8%A7%D9%84%D9%81%D8%AC%D9%8A%D8%B1%D8%A9/2550406">
+                              ريف الفجيرة
+                            </a>
+                                                                              </li>
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D8%A8%D8%A7%D9%86%D9%8A%D8%A7%D8%B3/2550403">
+                              بانياس
+                            </a>
+                                                                              </li>
+                                          </ul>
+                                      <ul class="cat-list col-md-4 col-sm-6 col-xs-12 mb-0 mb-xl-2 mb-lg-2 mb-md-2 cat-list-border">
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%B2%D8%A7%D9%8A%D8%AF/2550390">
+                              مدينة زايد
+                            </a>
+                                                                              </li>
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%A7%D9%85-%D8%A7%D9%84%D9%82%D9%88%D9%8A%D9%86/2550387">
+                              مدينة ام القوين
+                            </a>
+                                                                              </li>
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D8%A7%D9%84%D8%B4%D9%85%D8%AE%D8%A9/2550405">
+                              الشمخة
+                            </a>
+                                                                              </li>
+                                              <li>
+                                                      <a href="https://uae.souqopera.com/free-ads/%D8%A7%D9%84%D8%B9%D9%8A%D9%86/2550398">
+                              العين
+                            </a>
+                                                                              </li>
+                                              <li>
+                                                      <a href="#browseAdminCities" data-toggle="modal">مزيد من المدن »</a>
+                                                  </li>
+                                          </ul>
+                                  </div>
+              </div>
+
+                                                <a class="btn btn-lg btn-add-listing" href="#quickLogin" data-toggle="modal">
+                    <i class="fa fa-plus-circle"></i> أضف إعلانك مجاناً
+                  </a>
+
+            </div>
+                  </div>
+
+        <div class="col-lg-3 col-md-12 mt-3 mt-xl-0 mt-lg-0 text-center">
+    <div id="countryMap" class="page-sidebar col-thin-left no-padding" style="margin: auto;">&nbsp;</div>
+  </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+                                <div class="h-spacer"></div>
+    <div class="container">
+
+    <div class="container ads-parent-responsive d-none d-xl-block d-lg-block d-md-none d-sm-none">
+      <div class="text-center">
+
+      </div>
+    </div>
+
+      <div class="container ads-parent-responsive d-none d-xl-none d-lg-none d-md-block d-sm-none">
+        <div class="text-center">
+
+        </div>
+      </div>
+
+      <div class="container ads-parent-responsive d-block d-xl-none d-lg-none d-md-none d-sm-block">
+        <div class="text-center">
+
+        </div>
+      </div>
+      </div>
+                                <div class="h-spacer"></div>
+    <div class="container">
+
+    <div class="container mb20 ads-parent-responsive d-none d-xl-block d-lg-block d-md-none d-sm-none">
+      <div class="text-center">
+
+      </div>
+    </div>
+
+      <div class="container mb20 ads-parent-responsive d-none d-xl-none d-lg-none d-md-block d-sm-none">
+        <div class="text-center">
+
+        </div>
+      </div>
+
+      <div class="container ads-parent-responsive d-block d-xl-none d-lg-none d-md-none d-sm-block">
+        <div class="text-center">
+
+        </div>
+      </div>
+      </div>
+
+  </div>
+
+
+  <div class="row d-flex justify-content-center m-0 p-0">
+    <div class="col-12 text-center m-0 p-0">
+
+    </div>
+  </div>
+
+      <footer class="main-footer">
+  <div class="footer-content">
+    <div class="container">
+      <div class="row">
+
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <div class="footer-col">
+              <h4 class="footer-title">معلومات عنا</h4>
+              <ul class="list-unstyled footer-nav">
+                                                      <li>
+                                                                    <a href="https://uae.souqopera.com/page/faq"> التعليمات </a>
+                                          </li>
+                                      <li>
+                                                                    <a href="https://uae.souqopera.com/page/anti-scam"> مكافحة الغش </a>
+                                          </li>
+                                      <li>
+                                                                    <a href="https://uae.souqopera.com/page/privacy"> الخصوصية </a>
+                                          </li>
+                                                </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <div class="footer-col">
+              <h4 class="footer-title">الاتصال وخريطة الموقع</h4>
+              <ul class="list-unstyled footer-nav">
+                <li><a href="https://uae.souqopera.com/contact"> اتصل بنا </a></li>
+                <li><a href="https://uae.souqopera.com/sitemap"> التعليمات </a></li>
+                                  <li><a href="https://uae.souqopera.com/countries"> بلدان </a></li>
+                              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+            <div class="footer-col">
+              <h4 class="footer-title">حسابي</h4>
+              <ul class="list-unstyled footer-nav">
+                                  <li>
+                                          <a href="#quickLogin" data-toggle="modal"> تسجيل الدخول </a>
+                                      </li>
+                  <li><a href="https://uae.souqopera.com/register"> تسجيل </a></li>
+                              </ul>
+            </div>
+          </div>
+
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="footer-col row">
+
+
+                                  <div class="col-sm-12 col-xs-6 col-xxs-12 no-padding-lg">
+                    <div class="">
+                      <h4 class="footer-title ">اتبعنا</h4>
+                      <ul class="list-unstyled list-inline footer-nav social-list-footer social-list-color footer-nav-inline">
+                                                <li>
+                          <a class="icon-color fb" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                          </a>
+                        </li>
+                                                                        <li>
+                          <a class="icon-color tw" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                          </a>
+                        </li>
+                                                                          <li>
+                            <a class="icon-color pin" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Instagram">
+                              <i class="icon-instagram-filled"></i>
+                            </a>
+                          </li>
+                                                                        <li>
+                          <a class="icon-color gp" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Google+">
+                            <i class="fab fa-google-plus"></i>
+                          </a>
+                        </li>
+                                                                        <li>
+                          <a class="icon-color lin" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                          </a>
+                        </li>
+                                                                        <li>
+                          <a class="icon-color pin" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Pinterest">
+                            <i class="fab fa-pinterest-p"></i>
+                          </a>
+                        </li>
+                                              </ul>
+                    </div>
+                  </div>
+                              </div>
+            </div>
+
+          <div style="clear: both"></div>
+
+        <div class="col-xl-12">
+                                    <hr>
+
+          <div class="copy-info text-center">
+            © 2020 سوق أوبرا الإمارات. كل الحقوق محفوظة.
+                                          مشغل بواسطة <a href="http://www.onyxreco.com/" title="BedigitCom">onyx</a>.
+                                    </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+
+      <!-- Modal Change City -->
+<div class="modal fade" id="browseAdminCities" tabindex="-1" role="dialog" aria-labelledby="adminCitiesModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title" id="adminCitiesModalLabel">
+          <i class="icon-map"></i> حدد منطقتك
+        </h4>
+
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">×</span>
+          <span class="sr-only">قريب</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xl-12">
+            <p id="selectedAdmin">المدن الشهيرة في <strong>الإمارات العربية المتحدة</strong></p>
+            <div style="clear:both"></div>
+            <div class="col-sm-6 no-padding">
+              <form id="modalAdminForm" name="modalAdminForm" method="POST">
+                <input type="hidden" id="currSearch" name="curr_search" value="YTowOnt9">
+                <select class="form-control" id="modalAdminField" name="admin_code">
+                  <option selected="selected" value="">كل المناطق</option>
+                                                            <option value="AE.01">امارة ابو ظبي</option>
+                                          <option value="AE.06">امارة الشارقة</option>
+                                          <option value="AE.04">امارة الفجيرة</option>
+                                          <option value="AE.07">امارة ام القوين</option>
+                                          <option value="AE.03">امارة دبي</option>
+                                          <option value="AE.05">امارة راس الخيمة</option>
+                                          <option value="AE.02">امارة عجمان</option>
+                                                      </select>
+                <input type="hidden" name="_token" value="REt5gpxXdPVzmETZath8a6bobxgnijzV95Q8NeER">
+              </form>
+            </div>
+            <div style="clear:both"></div>
+            <hr class="hr-thin">
+          </div>
+          <div class="col-xl-12" id="adminCities"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- /.modal -->
+
+
+<div class="modal fade" id="quickLogin" tabindex="-1" role="dialog">
+  <div class="modal-dialog  modal-sm">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title"><i class="icon-login fa"></i> تسجيل الدخول </h4>
+
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">×</span>
+          <span class="sr-only">قريب</span>
+        </button>
+      </div>
+
+      <form role="form" method="POST" action="https://uae.souqopera.com/login">
+        <input type="hidden" name="_token" value="REt5gpxXdPVzmETZath8a6bobxgnijzV95Q8NeER">
+        <div class="modal-body">
+
+
+
+                    <!-- login -->
+                    <div class="form-group">
+            <label for="login" class="control-label">تسجيل الدخول (بريد الكتروني او هاتف)</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="icon-user fa"></i></span>
+              </div>
+              <input id="mLogin" name="login" type="text" placeholder="بريد الكتروني او هاتف" class="form-control">
+            </div>
+          </div>
+
+          <!-- password -->
+                    <div class="form-group">
+            <label for="password" class="control-label">كلمه السر</label>
+            <div class="input-group show-pwd-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="icon-lock fa"></i></span>
+              </div>
+              <input id="mPassword" name="password" type="password" class="form-control" placeholder="كلمه السر" autocomplete="off">
+              <span class="icon-append show-pwd">
+                <button type="button" class="eyeOfPwd">
+                  <i class="far fa-eye-slash"></i>
+                </button>
+              </span>
+            </div>
+          </div>
+
+          <!-- remember -->
+                    <div class="form-group">
+            <label class="checkbox form-check-label pull-left mt-2" style="font-weight: normal;">
+              <input type="checkbox" value="1" name="remember" id="mRemember" class=""> أبق تسجيل دخولي
+            </label>
+            <p class="pull-right mt-2">
+              <a href="https://uae.souqopera.com/password/reset"> فقدت كلمة المرور الخاصة بك؟ </a>
+            </p>
+            <div style=" clear:both"></div>
+          </div>
+          <div class="">
+            <label class="" style="font-weight: normal;">
+                 ليس لديك حساب
+              <a style="font-weight: bold" href="https://uae.souqopera.com/register">تسجيل</a>
+            </label>
+            <div style=" clear:both"></div>
+          </div>
+
+          <input type="hidden" name="quickLoginForm" value="1">
+        </div>
+        <div class="modal-footer">
+          <div>
+            <button type="button" class="btn btn-default" data-dismiss="modal">إلغاء</button>
+              <button type="submit" class="btn btn-success pull-right">تسجيل الدخول</button>
+          </div>
+          <br>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+<!-- Modal Change Country -->
+<div class="modal fade modalHasList" id="selectCountry" tabindex="-1" role="dialog" aria-labelledby="selectCountryLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title uppercase font-weight-bold" id="selectCountryLabel">
+          <i class="icon-map"></i> اختر بلدك
+        </h4>
+
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">×</span>
+          <span class="sr-only">قريب</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+
+                                    <ul class="cat-list col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6">
+
+                              </ul>
+                          <ul class="cat-list col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                                                                                                 <li>
+                      <img src="sw_files/blank.gif" class="flag flag-sa" style="margin-bottom: 4px; margin-right: 5px;">
+
+                      <a href="https://ksa.souqopera.com/" class="tooltip-test" title="المملكة العربية السعودية">
+
+                                        المملكة العربية السعودية
+                                        </a>
+
+
+                       </li>
+
+                              </ul>
+                          <ul class="cat-list col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                                                                                                 <li>
+                      <img src="sw_files/blank.gif" class="flag flag-tr" style="margin-bottom: 4px; margin-right: 5px;">
+
+                      <a href="https://souqopera.com/" class="tooltip-test" title="تركيا">
+
+                                        تركيا
+                                        </a>
+
+
+                       </li>
+
+                              </ul>
+                          <ul class="cat-list col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                                                                                                                 <li>
+                      <img src="sw_files/blank.gif" class="flag flag-eg" style="margin-bottom: 4px; margin-right: 5px;">
+
+                      <a href="https://egy.souqopera.com/" class="tooltip-test" title="مصر">
+
+                                        مصر
+                                        </a>
+
+
+                       </li>
+
+                              </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- /.modal -->
+
+
+
+
+
+
+
+
+
+<script>
+
+  var siteUrl = 'https://uae.souqopera.com';
+  var languageCode = 'ar';
+  var countryCode = 'AE';
+  var timerNewMessagesChecking = 60000;
+
+
+  var langLayout = {
+    'hideMaxListItems': {
+      'moreText': "عرض المزيد",
+      'lessText': "عرض أقل"
+    },
+    'select2': {
+      errorLoading: function(){
+        return "لا يمكن تحميل النتائج"
+      },
+      inputTooLong: function(e){
+        var t = e.input.length - e.maximum, n = 'الرجاء حذف ' + t + ' عناصر';
+        return t != 1 && (n += 's'),n
+      },
+      inputTooShort: function(e){
+        var t = e.minimum - e.input.length, n = 'الرجاء إضافة ' + t + ' عناصر';
+        return n
+      },
+      loadingMore: function(){
+        return "جاري تحميل نتائج إضافية..."
+      },
+      maximumSelected: function(e){
+        var t = 'تستطيع إختيار ' + e.maximum + ' بنود فقط';
+        return e.maximum != 1 && (t += 's'),t
+      },
+      noResults: function(){
+        return "لم يتم العثور على أي نتائج"
+      },
+      searching: function(){
+        return "جاري البحث…"
+      }
+    }
+  };
+</script>
+
+
+      <script>
+      var maxSubCats = 2;
+    </script>
+
+  <script>
+    /* Carousel Parameters */
+    var carouselItems = 0;
+    var carouselAutoplay = 1;
+    var carouselAutoplayTimeout = 1500;
+    var carouselLang = {
+      'navText': {
+        'prev': "سابق",
+        'next': "التالى"
+      }
+    };
+  </script>
+
+<script src="sw_files/app.js"></script>
+  <script src="sw_files/ar.js"></script>
+<script>
+  $(document).ready(function () {
+
+    $('.selecter').select2({
+      language: langLayout.select2,
+      dropdownAutoWidth: 'true',
+      minimumResultsForSearch: Infinity,
+      width: '100%'
+    });
+
+
+    $('.sselecter').select2({
+      language: langLayout.select2,
+      dropdownAutoWidth: 'true',
+      width: '100%'
+    });
+
+
+    $('.share').ShareLink({
+      title: 'سوق أوبرا الإمارات',
+      text: 'سوق أوبرا الإمارات',
+      url: 'https://uae.souqopera.com',
+      width: 640,
+      height: 480
+    });
+
+
+      });
+</script>
+
+          <script>
+      </script>
+
+  <script>
+    /* Modal Default Admin1 Code */
+                    var modalDefaultAdminCode = '0';
+          </script>
+  <script src="sw_files/load.js"></script>
+
+  <script src="sw_files/jquery.js"></script>
+  <script>
+    $(document).ready(function () {
+              $('#countryMap').css('cursor', 'pointer');
+        $('#countryMap').twism("create",
+        {
+          map: "custom",
+          customMap: 'images/maps/ae.svg',
+          backgroundColor: 'transparent',
+          border: '#4682B4',
+          hoverBorder: '#4682B4',
+          borderWidth: 4,
+          color: '#d5e3ef',
+          width: '300px',
+          height: '300px',
+          click: function(region) {
+            if (typeof region == "undefined") {
+              return false;
+            }
+            if (isBlankValue(region)) {
+              return false;
+            }
+            region = rawurlencode(region);
+                        var searchPage = 'https://uae.souqopera.com/search';
+                          searchPage = searchPage + '?r=' + region;
+                        redirect(searchPage);
+          },
+          hover: function(regionId) {
+            if (typeof regionId == "undefined") {
+              return false;
+            }
+            var selectedIdObj = document.getElementById(regionId);
+            if (typeof selectedIdObj == "undefined") {
+              return false;
+            }
+            selectedIdObj.style.fill = '#4682B4';
+            return;
+          },
+          unhover: function(regionId) {
+            if (typeof regionId == "undefined") {
+              return false;
+            }
+            var selectedIdObj = document.getElementById(regionId);
+            if (typeof selectedIdObj == "undefined") {
+              return false;
+            }
+            selectedIdObj.style.fill = '#d5e3ef';
+            return;
+          }
+        });
+          });
+  </script>
+
+    <script>
+    /* Default view (See in /js/script.js) */
+          listView('.list-view');
+        /* Save the Search page display mode */
+    var listingDisplayMode = readCookie('listing_display_mode');
+    if (!listingDisplayMode) {
+      createCookie('listing_display_mode', '.grid-view', 7);
+    }
+
+    /* Favorites Translation */
+    var lang = {
+      labelSavePostSave: "حفظ الإعلان",
+      labelSavePostRemove: "إزالة المفضلة",
+      loginToSavePost: "الرجاء تسجيل الدخول لحفظ الإعلانات.",
+      loginToSaveSearch: "الرجاء تسجيل الدخول لحفظ البحث.",
+      confirmationSavePost: "تم حفظ المشاركة في المفضلة بنجاح!",
+      confirmationRemoveSavePost: "تم حذف المشاركة من المفضلة بنجاح!",
+      confirmationSaveSearch: "تم حفظ البحث بنجاح!",
+      confirmationRemoveSaveSearch: "تم حذف البحث بنجاح!"
+    };
+    </script>
+
+
+<script src="stylesheet" href="js/bootstrap.min.js "></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+
+
+{% endblock %}
+</body>
+</html>
